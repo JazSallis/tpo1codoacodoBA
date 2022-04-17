@@ -1,0 +1,381 @@
+html {
+    font-size: 100%;
+}
+
+@font-face {
+    font-family: "fuente1";
+    src: url(Gravity-Light.otf);
+}
+
+@font-face {
+    font-family: "fuente1b";
+    src: url("Gravity-Book.otf");
+}
+
+@font-face {
+    font-family: "KarenEspada";
+    src: url("Ruthligos.ttf");
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+
+    100% {
+        box-shadow: 0 0 20px 0 rgba(255, 247, 9, 0.35);
+    }
+}
+
+@keyframes links {
+    0% {
+        transform-origin: 50% 50%;
+    }
+
+    100% {
+        transform-origin: 50% 50%;
+        text-shadow: 3px 3px 4px rgba(255, 247, 9, 0.35);
+        ;
+    }
+}
+
+/*Estilo de toda la página*/
+
+* {
+    font-family: "fuente1";
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #642d27;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    background-color: #33573ac4;
+}
+
+
+.flex-item {
+    width: 98%;
+    flex-flow: column wrap;
+    display: flex;
+    height: 100%;
+}
+
+.hache-uno{
+    height: fit-content;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 1rem 2rem;
+    letter-spacing: 0.1em;
+}
+
+/* Estilo del header*/
+
+header {
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url("fondo1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    margin: 0.2rem 0.7rem;
+    height: 100%;
+}
+
+
+#encabezado {
+    width: 100%;
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.2rem;
+    text-align: center;
+    
+}
+
+#encabezado:hover {
+    animation: links 0.7s ease 0s 1 normal forwards;
+}
+
+#titulo {
+    font-family: "KarenEspada";
+    letter-spacing: 0px;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+
+#subtitulo {
+    margin-top: 0px;
+    color: black;
+}
+
+#barra-nav {
+    font-size: 0.7rem;
+    margin: 0.3em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "fuente1b";
+}
+
+#acerca-de{
+    text-shadow: 2px 2px 2px #6A35DE;
+}
+
+#cont{
+    text-shadow: 2px 2px 2px #474DF5;
+}
+
+#prensa{
+    text-shadow:  2px 2px 2px #585ddf;
+}
+
+#proyectos{
+    text-shadow: 2px 2px 2px #3573DE
+}
+
+#donar{
+    text-shadow: 2px 2px 2px #4CC9FF;
+}
+
+/* Estilo del index main */
+
+#albumes-fotograficos{
+    height: fit-content;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 1rem 2rem;
+    letter-spacing: 0.1em;
+}
+
+#main-index {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.carpeta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 30vw;
+    height: 25vh;
+    border: 2px solid rgba(0, 0, 0, 0.66);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 2px black;
+    text-align: right;
+}
+
+.carpeta:hover {
+    animation: shadow 0.2s linear 0s 1 alternate forwards;
+}
+
+
+#mi-cuerpo {
+    background-image: url("rodete.jpeg");
+    background-position: top;
+    background-size: cover;
+}
+
+#nuestro-cuerpo {
+    background-image: url("muslo.jpeg");
+    background-position: left;
+    background-size: cover;
+}
+
+#naturaleza {
+   background-image: url("pacha.jpeg");
+   background-position: center;
+}
+
+#random {
+   background-image: url("jess.jpeg");
+   background-position: center;
+}
+
+#entrepieles {
+    background-image: url("patitas.jpeg");
+    background-position: center;
+}
+
+#expo {
+   background-image: url("manos.jpeg");
+   background-position: left;
+}
+
+/* Estilo footer*/
+
+footer {
+    width: 98%;
+    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    word-spacing: 1rem;
+    justify-content: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.386);
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+i {
+    font-size: 30px;
+    margin: 5px
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding-right: 0.5em;
+    font-size: 1.6em;
+}
+
+a:hover {
+    animation: links 0.7s ease 0s 1 normal forwards;
+}
+
+/* Estilo página de contacto */
+
+.flex-container-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85%;
+    height: 100%;
+    background-color: #33573ac4;
+}
+
+#contacto {
+    color: whitesmoke;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 1rem;
+}
+
+form{
+    width: 80vw;
+}
+
+input{
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+textarea{
+    font-size: 1rem;
+}
+
+.boton {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+/* Estilo página "sobre mi" */
+
+#sobremi {
+    color: whitesmoke;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+    letter-spacing: 0.1em;
+    margin-left: 0px;
+}
+
+#sobrela{
+    margin: 0.5rem 3rem;
+}
+
+#parrafo{
+    -webkit-column-count: 2; /*Chrome, Safari, Opera*/
+    -moz-column-count: 2; /*Firefox*/
+    column-count: 2;
+}
+
+/* estilo para pantallas mas chicas*/
+
+@media screen and (max-width:1024px) and (min-width:56px) {
+    .flex-container{
+        width: 95%;
+    }
+
+    .flex-container-contacto{
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    #encabezado{
+        text-shadow: 1px 1px 4px rgb(255, 255, 255);
+    }
+
+    #subtitulo{
+        color: yellow;
+    }
+
+    #sobremi{
+        font-size: 1rem;
+    }
+
+    #parrafo{
+        -webkit-column-count: 1; /*Chrome, Safari, Opera*/
+        -moz-column-count: 1; /*Firefox*/
+        column-count: 1;
+    }
+
+    #contacto{
+        margin: 0.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+     form{
+       font-size: 10px;
+    }
+
+    fieldset{
+        width: fit-content;
+    }
+
+    label{
+       font-size: 15px;
+       width: 100%;
+    }
+
+    textarea{
+       width: 90%;
+    }
+
+    i{
+       font-size: 2rem;
+    }
+}
+
+
