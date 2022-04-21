@@ -1,20 +1,16 @@
-html {
-    font-size: 100%;
-}
-
 @font-face {
     font-family: "fuente1";
-    src: url(Gravity-Light.otf);
+    src: url(fuentes/Gravity-Light.otf);
 }
 
 @font-face {
     font-family: "fuente1b";
-    src: url("Gravity-Book.otf");
+    src: url("fuentes/Gravity-Book.otf");
 }
 
 @font-face {
     font-family: "KarenEspada";
-    src: url("Ruthligos.ttf");
+    src: url("fuentes/Ruthligos.ttf");
 }
 
 @keyframes shadow {
@@ -39,7 +35,7 @@ html {
     }
 }
 
-/*Estilo de toda la página*/
+/* Estilo común a todas las páginas */
 
 * {
     font-family: "fuente1";
@@ -50,24 +46,24 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     background-color: #642d27;
+    min-width: 255px;
 }
 
 .flex-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 85%;
     height: 100%;
     background-color: #33573ac4;
 }
 
-
 .flex-item {
     width: 98%;
-    flex-flow: column wrap;
     display: flex;
+    flex-flow: column wrap;
     height: 100%;
+    border-radius: 0.3rem;
 }
 
 .hache-uno{
@@ -79,17 +75,16 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* Estilo del header*/
+/* Estilo del header (todas las páginas) */
 
 header {
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url("fondo1.jpg");
+    background-image: url("fotos-tpo/fondo1.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: 100vw;
+    background-repeat: no-repeat;
     margin: 0.2rem 0.7rem;
-    height: 100%;
 }
 
 
@@ -97,18 +92,12 @@ header {
     width: 100%;
     font-size: 0.8rem;
     color: rgb(0, 0, 0);
-    letter-spacing: 0.2rem;
     text-align: center;
     
 }
 
-#encabezado:hover {
-    animation: links 0.7s ease 0s 1 normal forwards;
-}
-
 #titulo {
     font-family: "KarenEspada";
-    letter-spacing: 0px;
     font-size: 2rem;
     margin-bottom: 0px;
 }
@@ -116,60 +105,130 @@ header {
 #subtitulo {
     margin-top: 0px;
     color: black;
+    letter-spacing: 0.2rem;
 }
 
 #barra-nav {
+    margin-right: 0.4rem;
+    padding: 0.2rem 0rem;
+    border-radius: 0.3rem 0rem / 0.3rem 0rem;
     font-size: 0.7rem;
-    margin: 0.3em;
-    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-family: "fuente1b";
+    background-color: rgba(0, 0, 0, 0.386);
+}
+
+.nav{
+    padding: 0.2rem;
 }
 
 #acerca-de{
     text-shadow: 2px 2px 2px #6A35DE;
+    border-radius: 0.3rem 0rem 0rem 0rem / 0.3rem 0rem 0rem 0rem;
+    /*text-shadow:1px 1px 3px #F0C70A;*/
 }
 
 #cont{
     text-shadow: 2px 2px 2px #474DF5;
+    /*text-shadow:1px 1px 3px #F7A70C;*/
 }
 
 #prensa{
-    text-shadow:  2px 2px 2px #585ddf;
+   text-shadow:  2px 2px 2px #585ddf;
+   /*text-shadow: 1px 1px 3px #E06500;*/
 }
 
 #proyectos{
-    text-shadow: 2px 2px 2px #3573DE
+   text-shadow: 2px 2px 2px #3573DE;
+   /*text-shadow:1px 1px 3px #F73E0C;*/
 }
 
 #donar{
-    text-shadow: 2px 2px 2px #4CC9FF;
+  text-shadow: 2px 2px 2px #4CC9FF;
+  /*text-shadow:1px 1px 3px #F01F33;*/
+  border-radius: 0rem 0rem 0.3rem 0rem / 0rem 0rem 0.3rem 0rem;;
 }
+
+/* Estilo del footer (todas las páginas) */
+footer {
+    margin: 0.5rem;
+    word-spacing: 1rem;
+    background-color: rgba(0, 0, 0, 0.386);
+}
+
+i {
+    font-size: 30px;
+    margin: 0.3rem
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-right: 0.5em;
+    font-size: 1.6em;
+}
+
+/* Animaciones y transiciones (de todas lass páginas) */
+#encabezado:hover {
+    animation: links 0.7s ease 0s 1 normal forwards;
+}
+
+a:hover {
+    animation: links 0.7s ease 0s 1 normal forwards;
+}
+
+#acerca-de:hover{
+    background-color: #6b35de5d;
+}
+
+#cont:hover{
+    background-color: #474df562;
+}
+
+#prensa:hover{
+    background-color: #585ddf5c;
+}
+
+#proyectos:hover{
+    background-color: #3573de5d;
+}
+
+#donar:hover{
+    background-color: #4cc9ff5a;
+}
+
+.carpeta:hover {
+    animation: shadow 0.2s linear 0s 1 alternate forwards;
+}
+
+a:active{
+    border: dashed 0.1px rgba(0, 0, 0, 0.107);
+    border-radius: 0.5rem;
+    text-shadow: 3px 3px 4px rgba(255, 247, 9, 0.493);
+}
+
+.carpeta:active{
+    box-shadow: 0 0 20px 0 rgba(255, 247, 9, 0.439);
+    border: solid 2px black;
+}
+
+.titulo-carpeta:hover{
+    background-color: rgba(255, 247, 9, 0.35);
+}
+
+/* ESTILOS DE MAIN POR PÁGINA */
 
 /* Estilo del index main */
-
-#albumes-fotograficos{
-    height: fit-content;
-    width: 100%;
-    color: whitesmoke;
-    font-size: 1.5em;
-    margin: 1rem 2rem;
-    letter-spacing: 0.1em;
-}
-
 #main-index {
-    display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
 }
 
 .carpeta {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 30vw;
+    width: 40%;
     height: 25vh;
     border: 2px solid rgba(0, 0, 0, 0.66);
     border-radius: 0.5rem;
@@ -178,96 +237,113 @@ header {
     letter-spacing: 0.1rem;
     text-shadow: 2px 2px 2px black;
     text-align: right;
+    padding: 0px;
 }
 
-.carpeta:hover {
-    animation: shadow 0.2s linear 0s 1 alternate forwards;
+.titulo-carpeta{
+    border-radius: 0.3rem 0rem / 0.3rem 0rem;
+    background-color: rgba(0, 0, 0, 0.386);
+    padding: 0rem 0.2rem;
 }
 
 
 #mi-cuerpo {
-    background-image: url("rodete.jpeg");
+    background-image: url("fotos-tpo/rodete.jpeg");
     background-position: top;
     background-size: cover;
 }
 
 #nuestro-cuerpo {
-    background-image: url("muslo.jpeg");
+    background-image: url("fotos-tpo/muslo1.jpeg");
     background-position: left;
     background-size: cover;
 }
 
 #naturaleza {
-   background-image: url("pacha.jpeg");
+   background-image: url("fotos-tpo/pacha.jpeg");
    background-position: center;
 }
 
 #random {
-   background-image: url("jess.jpeg");
+   background-image: url("fotos-tpo/jess1.jpeg");
    background-position: center;
 }
 
 #entrepieles {
-    background-image: url("patitas.jpeg");
+    background-image: url("fotos-tpo/patitas.jpeg");
     background-position: center;
 }
 
 #expo {
-   background-image: url("manos.jpeg");
+   background-image: url("fotos-tpo/manos.jpeg");
    background-position: left;
 }
 
-/* Estilo footer*/
-
-footer {
-    width: 98%;
-    margin: 0.5rem;
+/*estilos por cada album*/
+/*mi cuerpo mi territorio*/
+#main-micuerpo{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    word-spacing: 1rem;
-    justify-content: center;
-    justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.386);
-    border-radius: 0.5rem;
-    margin-top: 0.5rem;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    align-content: center;
 }
 
-i {
-    font-size: 30px;
-    margin: 5px
+#sub-marg{
+    padding-left: 3rem;
+}
+.main-scroll{
+    padding: 0.5rem;
+    height: 40vh;
+    overflow-y: scroll;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.196);
+    scrollbar-color: yellow;
+    scrollbar-width: 10px;
 }
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
-    padding-right: 0.5em;
-    font-size: 1.6em;
+.main-scroll::-webkit-scrollbar {
+    width: 0.5em;
+  }
+   
+  .main-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(231, 238, 31, 0.402);
+  }
+   
+  .main-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 182, 64);
+  }
+
+h4{
+    margin-top: 0.2rem;
 }
 
-a:hover {
-    animation: links 0.7s ease 0s 1 normal forwards;
+.grid-container{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   padding: 1rem;
+   gap: 0.5rem;
+}
+
+.grid-item{
+    position: relative;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Estilo página de contacto */
-
-.flex-container-contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 85%;
-    height: 100%;
-    background-color: #33573ac4;
+.main-contacto {
+    margin: 1rem;
 }
 
 #contacto {
     color: whitesmoke;
     display: flex;
     flex-flow: column wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 1rem;
 }
 
 form{
@@ -285,18 +361,22 @@ textarea{
 }
 
 .boton {
+    font-family: "fuente1b";
+    color: white;
     font-size: 1.2rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
     border-radius: 0.2rem;
     height: 2rem;
     width: fit-content;
+    background-image: url("icono.png");
+    background-position: center; 
 }
 
 /* Estilo página "sobre mi" */
 
 #sobremi {
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
     font-size: 0.9rem;
     margin: 0.5rem;
     letter-spacing: 0.1em;
@@ -313,23 +393,34 @@ textarea{
     column-count: 2;
 }
 
+/* Estilo pagina "prensa"*/
+#main-prensa{
+    margin: 0.5rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#main-prensa a{
+    text-decoration: 1px underline;
+    font-size: 0.9rem;
+}
+
+#main-prensa iframe{
+    width: 80%;
+    height: 40vh;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
 /* estilo para pantallas mas chicas*/
 
-@media screen and (max-width:1024px) and (min-width:56px) {
+/* Adaptacion tablet */
+@media screen and (max-width:1025px) and (min-width:379px) {
+   
     .flex-container{
-        width: 95%;
-    }
-
-    .flex-container-contacto{
         width: 95%;
         justify-content: center;
         align-items: center;
-    }
-    
-    header {
-        display: flex;
-        justify-content: center;
-        margin: 0px;
     }
 
     #encabezado{
@@ -341,7 +432,7 @@ textarea{
     }
 
     #sobremi{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     #parrafo{
@@ -376,6 +467,96 @@ textarea{
     i{
        font-size: 2rem;
     }
+
+}
+
+
+/* Adaptacion smartphone */
+@media screen and (max-width:379px) and (min-width:56px){
+
+    .flex-container{
+        width: 95%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header{
+        background-color: rgba(0, 0, 0, 0.386);
+    }
+
+    #encabezado{
+        text-shadow: 1px 1px 4px rgb(255, 255, 255);
+    }
+
+    .carpeta{
+        width: 90%;
+    }
+
+    footer{
+        align-items: center;
+    }
+
+    .hache-uno{
+        text-align: center;
+        width: fit-content;
+    }
+
+    #sobremi{
+        font-size: 0.6rem;
+    }
+
+    #parrafo{
+        -webkit-column-count: 1; /*Chrome, Safari, Opera*/
+        -moz-column-count: 1; /*Firefox*/
+        column-count: 1;
+    }
+
+    #contacto{
+        margin: 0.2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form{
+        font-size: 10px;
+     }
+ 
+     fieldset{
+         width: fit-content;
+     }
+ 
+     label{
+        font-size: 15px;
+        width: 100%;
+     }
+ 
+     textarea{
+        width: 90%;
+     }
+ 
+     i{
+        font-size: 2rem;
+     }
+}
+
+
+.main-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.en-construccion{
+    background-image: url("en-construccion.png");
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 50vh;
+    border-radius: 0.5rem;
+    margin: 1rem;
 }
 
 

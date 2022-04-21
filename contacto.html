@@ -8,11 +8,12 @@
     <title>K.E Contacto</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/91f5375ca9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="icono.png">
 </head>
 
 <body>
 
-    <section class="flex-container-contacto">
+    <section class="flex-container">
 
         <header class="flex-item">
             <a href="index.html" id="encabezado">
@@ -20,24 +21,26 @@
                 <h2 id="subtitulo">EXPLORACIÓN FOTOGRÁFICA</h2>
             </a>
             <nav id="barra-nav">
-                <a href="sobremi.html" id="acerca-de">Acerca de</a>
-                <a href="proyectos.html" id="proyectos">Proyectos</a>
-                <a href="prensa.html" id="prensa">Prensa</a>
-                <a href="contacto.html" id="cont">Contacto</a>
-                <a href="cafecito.html" id="donar">Cafecito</a>
-                </nav>
+                <a href="sobremi.html" class="nav" id="acerca-de">Acerca de</a>
+                <a href="proyectos.html" class="nav" id="proyectos">Proyectos</a>
+                <a href="prensa.html" class="nav" id="prensa">Prensa</a>
+                <a href="contacto.html" class="nav" id="cont">Contacto</a>
+                <a href="cafecito.html" class="nav" id="donar">Cafecito</a>
+            </nav>
         </header>
 
+        <section class="main-contacto">
         <main id="contacto">
-            <h4>Dejá tu mensaje en "comentarios" y recibirás una respuesta a la brevedad </h4>
-            <p>Los elementos con asterisco ( * ) son requeridos</p> <hr>
+            <h4>Dejá tu mensaje en el área de "Mensaje" y recibirás una respuesta a la brevedad </h4>
+            <p>Los elementos con asterisco ( * ) son requeridos para poder contestarte adecuadamente</p> <hr>
 
 
             <form action="https://formspree.io/f/xoqrknbd" method="POST" target="_blank">
                 <fieldset>
-                    <legend>Datos de contacto</legend>
+                    <legend> <3 </legend>
                     <label>Correo electrónico *: <br> <input type="email" name="email" placeholder="ejemplo@mail.com" required></label> <br><br><br>
                     <label>Nombre *: <br> <input type="text" name="nombre o apodo" id="nombre" placeholder="Nombre o Apodo"> </label> <br><br><br>
+                    <label>Pronombre: <br> <input type="text" name="pronombre" id="pronombre" placeholder="¿Con qué pronombre me dirijo?"></label> <br><br><br>
                     <label>Institución: <br> <input type="text" name="institucion" id="institucion" placeholder="Nombre de la institución"> </label> <br><br><br>
                     <label>Mensaje: <br> <textarea name="mensaje" id="mensaje" cols="40" rows="7"
                         placeholder="Escribí tu mensaje acá"></textarea></label> <br><br>
@@ -45,15 +48,15 @@
                 <button type="reset" class="boton">Borrar</button>
             </fieldset>
             </form>
-            
         </main>
+        </section>
 
-        <footer>
+        <footer class="flex-item">
             <nav>
-                <a href="https://www.instagram.com/jazsallis/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="https://twitter.com/?lang=es"><i class="fa-brands fa-twitter-square"></i></a>
-            </nav>
+                <a href="https://www.instagram.com/karenespadaph/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/karen.espada.9"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="https://twitter.com/KarenEspada"><i class="fa-brands fa-twitter-square"></i></a>
+                </nav>
         </footer>
     </section>
 
