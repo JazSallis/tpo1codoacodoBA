@@ -39,6 +39,7 @@
 
 * {
     font-family: "fuente1";
+    color: rgb(227, 227, 227);
 }
 
 body {
@@ -53,9 +54,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 85%;
+    width: 95%;
     height: 100%;
     background-color: #33573ac4;
+    align-items: center;
 }
 
 .flex-item {
@@ -68,8 +70,7 @@ body {
 
 .hache-uno{
     height: fit-content;
-    width: 100%;
-    color: whitesmoke;
+    width: 98%;
     font-size: 1.5em;
     margin: 1rem 2rem;
     letter-spacing: 0.1em;
@@ -80,7 +81,7 @@ body {
 header {
     justify-content: flex-end;
     align-items: flex-end;
-    background-image: url("fotos-tpo/fondo1.jpg");
+    background-image: url("fotos-tpo/portadas/fondo1.jpg");
     background-position: center;
     background-size: 100vw;
     background-repeat: no-repeat;
@@ -91,13 +92,13 @@ header {
 #encabezado {
     width: 100%;
     font-size: 0.8rem;
-    color: rgb(0, 0, 0);
     text-align: center;
     
 }
 
 #titulo {
     font-family: "KarenEspada";
+    color: black;
     font-size: 2rem;
     margin-bottom: 0px;
 }
@@ -112,7 +113,7 @@ header {
     margin-right: 0.4rem;
     padding: 0.2rem 0rem;
     border-radius: 0.3rem 0rem / 0.3rem 0rem;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0.386);
 }
@@ -121,19 +122,22 @@ header {
     padding: 0.2rem;
 }
 
-#acerca-de{
-    text-shadow: 2px 2px 2px #6A35DE;
+#inicio{
+    text-shadow: 2px 2px 2px #BF2517;
     border-radius: 0.3rem 0rem 0rem 0rem / 0.3rem 0rem 0rem 0rem;
-    /*text-shadow:1px 1px 3px #F0C70A;*/
+}
+
+#acerca-de{
+    text-shadow: 2px 2px 2px #F25F29;
 }
 
 #cont{
-    text-shadow: 2px 2px 2px #474DF5;
+    text-shadow: 2px 2px 2px #F29A2E;
     /*text-shadow:1px 1px 3px #F7A70C;*/
 }
 
 #prensa{
-   text-shadow:  2px 2px 2px #585ddf;
+   text-shadow:  2px 2px 2px #F28A2E;
    /*text-shadow: 1px 1px 3px #E06500;*/
 }
 
@@ -143,7 +147,7 @@ header {
 }
 
 #donar{
-  text-shadow: 2px 2px 2px #4CC9FF;
+  text-shadow: 2px 2px 2px #04BF55;
   /*text-shadow:1px 1px 3px #F01F33;*/
   border-radius: 0rem 0rem 0.3rem 0rem / 0rem 0rem 0.3rem 0rem;;
 }
@@ -153,6 +157,7 @@ footer {
     margin: 0.5rem;
     word-spacing: 1rem;
     background-color: rgba(0, 0, 0, 0.386);
+    /*align-items: center;*/
 }
 
 i {
@@ -161,7 +166,6 @@ i {
 }
 
 a {
-    color: rgb(255, 255, 255);
     text-decoration: none;
     padding-right: 0.5em;
     font-size: 1.6em;
@@ -173,19 +177,23 @@ a {
 }
 
 a:hover {
-    animation: links 0.7s ease 0s 1 normal forwards;
+    animation: links 0.5s ease 0s 1 normal forwards;
+}
+
+#inicio:hover{
+    background-color: #bf25176c;
 }
 
 #acerca-de:hover{
-    background-color: #6b35de5d;
+    background-color:#f25f2979;
 }
 
 #cont:hover{
-    background-color: #474df562;
+    background-color: #f29a2e76;
 }
 
 #prensa:hover{
-    background-color: #585ddf5c;
+    background-color: #f2892e77;
 }
 
 #proyectos:hover{
@@ -193,7 +201,7 @@ a:hover {
 }
 
 #donar:hover{
-    background-color: #4cc9ff5a;
+    background-color: #04bf5576;
 }
 
 .carpeta:hover {
@@ -206,14 +214,16 @@ a:active{
     text-shadow: 3px 3px 4px rgba(255, 247, 9, 0.493);
 }
 
-.carpeta:active{
-    box-shadow: 0 0 20px 0 rgba(255, 247, 9, 0.439);
-    border: solid 2px black;
-}
-
 .titulo-carpeta:hover{
     background-color: rgba(255, 247, 9, 0.35);
 }
+
+.boton:hover{
+    box-shadow: 2px 2px 5px rgb(255, 182, 64);
+    height: 2.2rem;
+    width: 7.2rem;
+}
+
 
 /* ESTILOS DE MAIN POR PÁGINA */
 
@@ -228,16 +238,18 @@ a:active{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 40%;
-    height: 25vh;
+    width: 48%;
+    min-width:300px;
+    height: 50vh;
     border: 2px solid rgba(0, 0, 0, 0.66);
     border-radius: 0.5rem;
-    margin: 0.5rem;
-    font-size: 1.1rem;
+    margin: 0.2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     text-shadow: 2px 2px 2px black;
     text-align: right;
     padding: 0px;
+    background-size: cover;
 }
 
 .titulo-carpeta{
@@ -248,91 +260,110 @@ a:active{
 
 
 #mi-cuerpo {
-    background-image: url("fotos-tpo/rodete.jpeg");
-    background-position: top;
-    background-size: cover;
-}
-
-#nuestro-cuerpo {
-    background-image: url("fotos-tpo/muslo1.jpeg");
-    background-position: left;
-    background-size: cover;
+    background-image: url("fotos-tpo/portadas/pau.jpeg");
+    background-position: right;
 }
 
 #naturaleza {
-   background-image: url("fotos-tpo/pacha.jpeg");
-   background-position: center;
+   background-image: url("fotos-tpo/portadas/pacha.jpeg");
+   background-position:  right bottom;
 }
 
 #random {
-   background-image: url("fotos-tpo/jess1.jpeg");
+   background-image: url("fotos-tpo/portadas/jess1.jpeg");
    background-position: center;
 }
 
 #entrepieles {
-    background-image: url("fotos-tpo/patitas.jpeg");
-    background-position: center;
+    background-image: url("fotos-tpo/portadas/manos.jpeg");
+    background-position: top;
 }
 
 #expo {
-   background-image: url("fotos-tpo/manos.jpeg");
+   background-image: url("fotos-tpo/portadas/kar.jpg");
    background-position: left;
 }
 
 /*estilos por cada album*/
-/*mi cuerpo mi territorio*/
-#main-micuerpo{
-    display: flex;
-    color: rgb(255, 255, 255);
-    align-items: center;
-    align-content: center;
+
+img{
+    width: 100%;
 }
 
-#sub-marg{
-    padding-left: 3rem;
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
 }
-.main-scroll{
+
+.column{
+    flex: 25%;
+    padding: 5px;
+    min-width: 300px;
+}
+
+.column img{
+    margin-top: 5px;
+}
+
+.galeria{
+    display: flex;
+    margin: 0.7rem 0.7rem !important;
+    align-items: center !important;
+    align-content: center !important;
+}
+
+/*mi cuerpo mi territorio*/
+
+.prologo{
     padding: 0.5rem;
     height: 40vh;
     overflow-y: scroll;
     width: 95%;
     background-color: rgba(0, 0, 0, 0.196);
-    scrollbar-color: yellow;
-    scrollbar-width: 10px;
 }
 
-.main-scroll::-webkit-scrollbar {
+.prologo::-webkit-scrollbar {
     width: 0.5em;
   }
    
-  .main-scroll::-webkit-scrollbar-track {
+  .prologo::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(231, 238, 31, 0.402);
   }
    
-  .main-scroll::-webkit-scrollbar-thumb {
+  .prologo::-webkit-scrollbar-thumb {
     background-color: rgb(255, 182, 64);
   }
 
 h4{
     margin-top: 0.2rem;
+    margin-bottom: 0px;
 }
 
-.grid-container{
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   padding: 1rem;
-   gap: 0.5rem;
+/* Naturaleza */
+
+
+/*expo*/
+
+/* entrepieles */
+
+#main-entrepieles{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-.grid-item{
-    position: relative;
+#parrafo-entrepieles{
+    margin: 1rem 6rem 1rem 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.386);
 }
 
-
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+#nuestro-cuerpo {
+    background-image: url("fotos-tpo/portadas/muslo1.jpeg");
+    background-position: left;
+    width: 55%;
+    height: 50vh;
 }
 
 /* Estilo página de contacto */
@@ -341,7 +372,6 @@ img{
 }
 
 #contacto {
-    color: whitesmoke;
     display: flex;
     flex-flow: column wrap;
 }
@@ -354,43 +384,64 @@ input{
     width: 15rem;
     height: 1.5rem;
     font-size: 1rem;
+    color: black;
 }
 
 textarea{
     font-size: 1rem;
+    color: black;
+}
+
+.msjerror{
+    color: rgb(255, 182, 64);
 }
 
 .boton {
     font-family: "fuente1b";
-    color: white;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
+    color: rgb(255, 157, 0);
+    text-shadow: 1px 1px 1px gray;
+    background-image: url(fotos-tpo/mi-cuerpo/manos.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    font-size: 1.2rem;  
+    border: 0.5px solid black;
     border-radius: 0.2rem;
     height: 2rem;
-    width: fit-content;
-    background-image: url("icono.png");
-    background-position: center; 
+    width: 7rem;
 }
 
 /* Estilo página "sobre mi" */
 
 #sobremi {
-    color: rgb(255, 255, 255);
-    font-size: 0.9rem;
     margin: 0.5rem;
     letter-spacing: 0.1em;
-    margin-left: 0px;
+ 
 }
 
 #sobrela{
     margin: 0.5rem 3rem;
 }
 
-#parrafo{
+#kar{
+    min-width: 5rem;
+    max-width: 17trem;
+    float: left;
+    padding-right: 0.5rem;
+}
+
+
+.parrafo{
+    background-color: rgba(0, 0, 0, 0.386);
+    padding: 1rem;
+    margin: 1rem;
+    letter-spacing: 0.05px;
     -webkit-column-count: 2; /*Chrome, Safari, Opera*/
     -moz-column-count: 2; /*Firefox*/
     column-count: 2;
+}
+
+p{
+    margin: 0px;
 }
 
 /* Estilo pagina "prensa"*/
@@ -406,16 +457,56 @@ textarea{
 }
 
 #main-prensa iframe{
-    width: 80%;
-    height: 40vh;
+    width: 90%;
+    height: 60vh;
     border-radius: 0.5rem;
     margin: 1rem;
+}
+
+/* Estilo página Cafecito */
+
+#main-cafecito{
+    margin-left: 1rem;
+    display: flex;
+}
+
+#parrafo-cafe{
+    width: 95%;
+}
+
+#cafecitos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 98%;
+    margin: 5rem 0.5rem;
+}
+
+.caf{
+    color: #592115;
+    padding: 1rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    margin: 0.5rem;
+}
+
+#cafe-comun{
+    background-color: #D9D2B0;
+}
+
+#cafe-con-leche{
+    background-color: #F28E13;
+}
+
+#capuccino{
+    background-color: #F25D27;
 }
 
 /* estilo para pantallas mas chicas*/
 
 /* Adaptacion tablet */
-@media screen and (max-width:1025px) and (min-width:379px) {
+@media screen and (max-width:1122px) and (min-width:379px) {
    
     .flex-container{
         width: 95%;
@@ -431,14 +522,15 @@ textarea{
         color: yellow;
     }
 
-    #sobremi{
-        font-size: 0.9rem;
+    .parrafo {
+        font-size: 1rem;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
     }
 
-    #parrafo{
-        -webkit-column-count: 1; /*Chrome, Safari, Opera*/
-        -moz-column-count: 1; /*Firefox*/
-        column-count: 1;
+    #parrafo-entrepieles{
+        margin-right: 1rem;
     }
 
     #contacto{
@@ -452,7 +544,7 @@ textarea{
     }
 
     fieldset{
-        width: fit-content;
+        width: 100%;
     }
 
     label{
@@ -461,18 +553,19 @@ textarea{
     }
 
     textarea{
-       width: 90%;
+       width: 70%;
+       min-width: 300px;
     }
 
-    i{
-       font-size: 2rem;
+    #cafecitos{
+        flex-direction: column;
+        align-items: center;
     }
-
 }
 
 
 /* Adaptacion smartphone */
-@media screen and (max-width:379px) and (min-width:56px){
+@media screen and (max-width:411px) and (min-width:56px){
 
     .flex-container{
         width: 95%;
@@ -480,21 +573,21 @@ textarea{
         justify-content: center;
         align-items: center;
     }
-    
-    header{
-        background-color: rgba(0, 0, 0, 0.386);
-    }
 
     #encabezado{
         text-shadow: 1px 1px 4px rgb(255, 255, 255);
     }
 
-    .carpeta{
-        width: 90%;
+    #barra-nav{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        border-radius: 0.3rem;
+        width: 100%;
     }
 
-    footer{
-        align-items: center;
+    .carpeta{
+        width: 90%;
     }
 
     .hache-uno{
@@ -503,13 +596,21 @@ textarea{
     }
 
     #sobremi{
-        font-size: 0.6rem;
+        justify-content: center;
+        align-items: center;
     }
 
-    #parrafo{
-        -webkit-column-count: 1; /*Chrome, Safari, Opera*/
-        -moz-column-count: 1; /*Firefox*/
+    .parrafo {
+        font-size: 1rem;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
         column-count: 1;
+        width: 90%;
+        margin: 0px;
+    }
+
+    #kar{
+        width: 90%;
     }
 
     #contacto{
@@ -532,31 +633,18 @@ textarea{
      }
  
      textarea{
-        width: 90%;
+        width: 95%;
      }
- 
-     i{
-        font-size: 2rem;
+
+     #cafecitos{
+         margin: 1rem 0.5rem;
+     }
+
+     footer{
+         align-items: center;
      }
 }
 
 
-.main-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.en-construccion{
-    background-image: url("en-construccion.png");
-    background-position: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-    width: 90%;
-    height: 50vh;
-    border-radius: 0.5rem;
-    margin: 1rem;
-}
 
 

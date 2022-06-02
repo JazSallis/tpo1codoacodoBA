@@ -8,12 +8,11 @@
     <title>K.E Contacto</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/91f5375ca9.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="icono.png">
+    <link rel="icon" href="fotos-tpo/icono.png">
+    <script src="script.js"> </script>
 </head>
-
 <body>
-
-    <section class="flex-container">
+      <section class="flex-container">
 
         <header class="flex-item">
             <a href="index.html" id="encabezado">
@@ -21,8 +20,9 @@
                 <h2 id="subtitulo">EXPLORACIÓN FOTOGRÁFICA</h2>
             </a>
             <nav id="barra-nav">
+                <a href="index.html" class="nav" id="inicio">Inicio</a>
                 <a href="sobremi.html" class="nav" id="acerca-de">Acerca de</a>
-                <a href="proyectos.html" class="nav" id="proyectos">Proyectos</a>
+                <!-- <a href="proyectos.html" class="nav" id="proyectos">Proyectos</a> -->
                 <a href="prensa.html" class="nav" id="prensa">Prensa</a>
                 <a href="contacto.html" class="nav" id="cont">Contacto</a>
                 <a href="cafecito.html" class="nav" id="donar">Cafecito</a>
@@ -30,25 +30,32 @@
         </header>
 
         <section class="main-contacto">
-        <main id="contacto">
-            <h4>Dejá tu mensaje en el área de "Mensaje" y recibirás una respuesta a la brevedad </h4>
-            <p>Los elementos con asterisco ( * ) son requeridos para poder contestarte adecuadamente</p> <hr>
+            <main id="contacto">
+                <h4>Dejá tu mensaje en el área de "Mensaje" y recibirás una respuesta a la brevedad </h4>
+                <p>Los elementos con asterisco ( * ) son requeridos para poder contestarte adecuadamente</p>
+                <hr>
 
 
-            <form action="https://formspree.io/f/xoqrknbd" method="POST" target="_blank">
-                <fieldset>
-                    <legend> <3 </legend>
-                    <label>Correo electrónico *: <br> <input type="email" name="email" placeholder="ejemplo@mail.com" required></label> <br><br><br>
-                    <label>Nombre *: <br> <input type="text" name="nombre o apodo" id="nombre" placeholder="Nombre o Apodo"> </label> <br><br><br>
-                    <label>Pronombre: <br> <input type="text" name="pronombre" id="pronombre" placeholder="¿Con qué pronombre me dirijo?"></label> <br><br><br>
-                    <label>Institución: <br> <input type="text" name="institucion" id="institucion" placeholder="Nombre de la institución"> </label> <br><br><br>
-                    <label>Mensaje: <br> <textarea name="mensaje" id="mensaje" cols="40" rows="7"
-                        placeholder="Escribí tu mensaje acá"></textarea></label> <br><br>
-                <button type="submit" class="boton">Enviar</button>
-                <button type="reset" class="boton">Borrar</button>
-            </fieldset>
-            </form>
-        </main>
+                <form action="https://formspree.io/f/xoqrknbd" onsubmit="return validarFormulario()" method="POST"
+                    target="_blank" id="formulario">
+                    <fieldset>
+                        <legend> ✉ </legend>
+                            <label>Correo electrónico *: <br> <input type="text" name="email" id="email" placeholder="ejemplo@mail.com"></label> <br>
+                            <div id="mailInvalido" class="msjerror"></div> <br>
+                            <label>Nombre *: <br> <input type="text" name="nombre o apodo" id="nombre" placeholder="Nombre o Apodo"> </label> <br>
+                            <div id="nombreInvalido" class="msjerror"></div><br>
+                            <label>Pronombre: <br> <input type="text" name="pronombre" id="pronombre" placeholder="Ellx, Elle, Ella, Él ... "></label> <br><br>
+                            <label>Institución: <br> <input type="text" name="institucion" id="institucion" placeholder="Sólo si corresponde"> </label> <br><br><br>
+                            <label>Mensaje: <br> <textarea name="mensaje" id="mensaje" cols="40" rows="7" placeholder="Escribí tu mensaje acá"></textarea></label><br>
+                            <div id="mensajeVacio" class="msjerror"></div> <br>
+
+                            
+
+                            <button type="submit" value="Enviar" class="boton" id="botonsubmit">Enviar</button>
+                    </fieldset>
+                </form>
+
+            </main>
         </section>
 
         <footer class="flex-item">
@@ -56,10 +63,9 @@
                 <a href="https://www.instagram.com/karenespadaph/"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.facebook.com/karen.espada.9"><i class="fa-brands fa-facebook-square"></i></a>
                 <a href="https://twitter.com/KarenEspada"><i class="fa-brands fa-twitter-square"></i></a>
-                </nav>
+            </nav>
         </footer>
     </section>
 
 </body>
-
 </html>
